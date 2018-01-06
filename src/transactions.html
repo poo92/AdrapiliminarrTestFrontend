@@ -1,0 +1,27 @@
+  <template>
+      <div class="container">
+    <div class="container  col-xs-7 col-xs-offset-3  col-lg-offset-3" if.bind="transactions">
+        <br />
+        <div class="row">
+            <div class="panel panel-default" style.bind="fonts">
+                <div class="panel-heading"> Account Balances of ${accountName} Account</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <ul class="col-xs-5 col-lg-offset-1" style="list-style-type:none">
+                            <li repeat.for="item of transactions">${item.reference} :</li>
+                        </ul>
+                        <ul class="col-xs-6" style="list-style-type:none">
+                            <li repeat.for="item of transactions">${item.amount}</li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-5 col-lg-offset-1"> total</label>
+                        <label class="col-xs-5"> ${total}</label>
+                    </div>                 
+                </div>
+              
+            </div>
+        </div>       
+      </div>
+      </div>
+</template>
